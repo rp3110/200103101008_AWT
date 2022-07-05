@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            animation-name: rp;
+            animation-duration: 10s;
+            animation-iteration-count:infinite;
+        }
+        @keyframes rp{
+            0%{background-color: rgb(82, 23, 171);top: 0px;left: 0px;transform: rotate(0deg);}
+            25%{background-color: rgb(191, 62, 114);top: 0px;left: 200px;transform: rotate(90deg);}
+            50%{background-color: rgb(170, 170, 228);top: 200px;left: 200px;transform: rotate(180deg);}
+            75%{background-color:red;top: 200px;left: 0px;transform: rotate(270deg);}
+            100%{background-color:yellowgreen;top: 0px;left: 0px;transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div>hii</div>
+</body>
+</html>

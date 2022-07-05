@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 175px;
+            height: 175px;
+            background-color: brown;
+            font-size: 40px;
+            transition: 3s;
+            }
+        #Translate:hover{
+            -webkit-transform:translate(100px,100px);
+            -o-transform:translate(100px,100px);
+            -moz-transform:translate(100px,100px);
+            transform:translate(100px,100px);
+            background-color: blue;
+            color:rgb(23, 7, 10);
+        }
+        #Rotate:hover{
+            -webkit-transform:rotate(360deg);
+            -ms-transform:rotate(360deg);
+            -moz-transform:rotate(360deg);
+            -o-transform:rotate(360deg);
+            background-color:cadetblue;
+            color: black;
+        }
+        #Rotate3d:hover{
+            -webkit-transform: rotate3d(1,1,0,360deg);
+            -ms-transform: rotate3d(1,1,0,360deg);
+            -moz-transform: rotate3d(1,1,0,360deg);
+            -o-transform: rotate3d(1,1,0,360deg);
+            transform: rotate3d(1,1,0,360deg);
+            background-color: chartreuse;
+            color: rgb(37, 26, 26);
+        }
+        #skew:hover{
+            -webkit-transform:skew(45deg);
+            -moz-transform:skew(45deg);
+            -ms-transform:skew(45deg);
+            -o-transform:skew(45deg);
+            transform:skew(45deg);
+            background-color: blue;
+            color:black;
+        }
+        #scale:hover{
+            -webkit-transform:scale(1.5,0.5);
+            -moz-transform:scale(1.5,0.5);
+            -ms-transform:scale(1.5,0.5);
+            -o-transform:scale(1.5,0.5);
+            transform:scale(1.5,0.5);
+
+        }
+        #opacity:hover{
+            opacity: 0.5;
+        }
+        #box-show:hover{
+            box-shadow: rgb(47, 210, 50) 0px 0px 300px;
+        }
+        #rgba:hover{
+            background-color:blue;
+        }
+        #text-shadow:hover{
+            text-shadow:3px 3px 3px yellow;
+        }
+        #border-radius:hover{
+            border-radius: 22%;
+            
+        }
+        #overflow{
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+   <div id="Translate">Translate</div><hr> 
+   <div id="Rotate">Rotate</div><hr>
+   <div id="Rotate3d">Rotate3d</div><hr>
+   <div id="skew">skew</div><hr>
+   <div id="scale">scale</div><hr>
+   <div id="opacity">opacity</div><hr>
+   <div id="box-show">box-show</div><hr>
+   <div id="rgba">rgba</div><hr>
+   <div id="text-shadow">text-shadow</div><hr>
+   <div id="border-radius">border-radius</div><hr>
+   <div id="overflow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptas nulla, ut obcaecati, nesciunt odio a eaque perspiciatis doloremque dolore ea harum expedita blanditiis dolorem officia magnam assumenda, cumque iusto.</div><hr>
+</body>
+</html>
