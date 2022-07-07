@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function demoInternalAlert(){
+            alert("Internal Alert")
+        }
+        function demoInternalConfirm(){
+            if(confirm('are you sure?')){
+                alert('YES')
+            }
+            else{
+                alert('NO')
+            }
+        }
+        function demoInternalPrompt(){
+            var demo1=prompt('Enter Your First Name')
+            var demo2=prompt('Enter Your Last Name')
+            alert(demo1+" "+demo2)
+        }
+        function bbg(){
+            document.body.style.backgroundColor="blue";
+        }
+        function dbg(){
+            document.getElementById("d1").style.backgroundColor="gray";
+        }
+        function bbp(){
+            document.body.style.backgroundColor=prompt('Enter any color');
+        }
+        function dbp(){
+            document.getElementById("d1").style.backgroundColor=prompt('Enter any color');
+        }
+        function ccc(){
+            document.body.style.backgroundColor=document.getElementById("c1").value;
+        }
+        function ccd(){
+            document.getElementById("d1").style.backgroundColor=document.getElementById("c2").value;
+        }
+
+    </script>
+    <script src="vanilla.js"></script>
+    <style>
+        body{
+            background-color: chartreuse;
+        }
+        #d1{
+            background-color: brown;
+            height: 300px;
+            width: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="d1">
+        Hello World
+    </div>
+    <hr>
+    <input type="button" value="Alert Inline" onclick="alert('hello')">&nbsp;&nbsp;
+    <input type="button" value="Confirm Inline" onclick="confirm('hii')">&nbsp;&nbsp;
+    <input type="button" value="Prompt Inline" onclick="prompt('Enter the Input')">
+    <hr>
+    <input type="button" value="Alert Internal" onclick="demoInternalAlert()">
+    <input type="button" value="Confirm Internal"onclick="demoInternalConfirm()">
+    <input type="button" value="Prompt Internal" onclick="demoInternalPrompt()">
+    <hr>
+    <input type="button" value="Alert External" onclick="demoExternalAlert()">
+    <input type="button" value="Confirm External"onclick="demoExternalConfirm()">
+    <input type="button" value="Prompt External" onclick="demoExternalPrompt()">
+    <hr>
+    <input type="button" value="Body Big Green" onclick="bbg()">&nbsp;&nbsp;
+    <input type="button" value="Div Big Gray" onclick="dbg()">&nbsp;&nbsp;
+    <hr>
+    <input type="button" value="Body Big Prompt" onclick="bbp()">&nbsp;&nbsp;
+    <input type="button" value="Div Big prompt" onclick="dbp()">&nbsp;&nbsp;
+    <hr>
+    <input type="color" id="c1" onchange="ccc()">
+    <input type="color"  id="c2" onchange="ccd()">
+	
+
+</body>
+</html>
