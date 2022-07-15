@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('#show').attr('disabled',true)
+        $('#hide').click(function(){
+            if(confirm("are you sure?")){
+                $('#box').hide(2000)
+                $(this).attr('disabled',true)
+                $('#show').attr('disabled',false)
+                $('#toggle').text("Show")
+            }
+        })
+        $('#show').click(function(){
+            if(confirm("are you sure?")){
+              $('#box').show(2000)
+              $(this).attr('disabled',true)
+              $('#hide').attr('disabled',false)
+              $('#toggle').text("Hide")         
+           }
+        })
+
+        $('#toggle').click(function (){
+          $('#box').toggle(2000);
+          ($('#toggle').text()=="Hide")
+          ?($(this).text("Show"),$('#hide').attr('disabled',true),$('#show').attr('disabled',false))
+          :($(this).text("Hide"),$('#hide').attr('disabled',false),$('#show').attr('disabled',true))
+        })
+
+        $('#plus').click(function (){
+            let size=parseInt($('#box').css("height"))
+            if(size<=500){
+                size+=10;
+                $('#box').css('height',size)
+                $('#box').css('width',size)
+            }
+            else{
+                alert("Size is 500px")
+            }
+        })
+        $('#minus').click(function (){
+            let size=parseInt($('#box').css("height"))
+            if(size>=20){
+                size-=10;
+                $('#box').css('height',size)
+                $('#box').css('width',size)
+            }
+            else{
+                alert("size less than 20px")
+            }
+        })
+      })
+    </script>
+</head>
+<body>
+    <div style="height:400px; width:400px; background-color:blueviolet; " id="box"></div><hr>
+    <input type="button" value="Hide"  id="hide">&nbsp;&nbsp;
+    <input type="button" value="Show" id="show" >&nbsp;&nbsp;
+    <hr>
+    <button id="toggle">Hide</button><hr>
+    <input type="button" id="plus" value="+" style="font-size:larger;">
+    <input type="button" value="-" id="minus" style="font-size:larger;">
+
+</body>
+</html>

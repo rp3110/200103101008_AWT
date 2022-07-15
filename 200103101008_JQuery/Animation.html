@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+       $(document).ready(function() {
+        $("#a1").click(function(){
+            $("#a4").animate({left:"300px"})
+        })
+        $("#a2").click(function(){
+            $("#a4").animate({
+                left:'200px',
+                opacity:'0.5',
+                height:'150px',
+                width:'150px',
+            })
+        })
+
+        $("#a3").click(function(){
+            var div=("#div")
+            $("#a4").animate({height:"300px",width:"100px",opacity:"0.4"},"solw")
+            $("#a4").animate({height:"300px",width:"300px",opacity:"0.4"},"solw")
+            $("#a4").animate({height:"100px",width:"300px",opacity:"0.4"},"solw")
+            $("#a4").animate({height:"150px",width:"150px",opacity:"0.4"},"solw")
+        })
+
+       })
+    </script>
+</head>
+<body>
+    <div>
+    <button id="a1">Animation1</button>
+    <button id="a2">Animation2</button>
+    <button id="a3">Animation3</button>
+    </div>
+    <br>
+    <div id="a4" style="background-color:blueviolet;height: 100px; width: 100px;position: absolute;"></div>
+</body>
+</html>
