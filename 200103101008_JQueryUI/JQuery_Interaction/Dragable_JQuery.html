@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+      <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+     
+    <style>
+    #mydiv,#mydiv2,#mydiv3,#mydiv4,#mydiv5,#mydiv6{
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        color: bisque;
+        background: blue;
+        font-size: medium;
+        font-weight: bold;
+
+    }
+    #mydiv6{
+        width: 800px;
+        height: 200px;
+        padding: 10px;
+        color: rgb(58, 49, 38);
+        background: blue;
+        font-size: medium;
+        font-weight: bold;
+
+    }
+    #mydiv2,#mydiv3,#mydiv4,#mydiv5,#mydiv6{
+        border: solid black;
+    }
+     
+    </style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#mydiv").draggable();
+        $("#mydiv2 span").draggable({
+            containment:"mydiv2"
+        });
+        $("#mydiv3 span").draggable({
+            axis:"x"
+        });
+        $("#mydiv4 span").draggable({
+            axis:"y"
+        });
+        $("#mydiv5 span").draggable({
+            distance: 200
+        });
+        $("#mydiv6 span").draggable({
+            delay:3000
+
+        });
+       });
+</script>
+</head>
+<body>
+    <div id="mydiv">
+        <p>Hello world...</p>
+    </div>
+    <hr />
+    <div id="mydiv2">
+        <span>This Is My Home And I Can Move Within It Only.....</span><br /><br />
+    </div>
+    <hr />
+    <div id="mydiv3">
+        <span>I Can Move Only Horizontaly....</span><br /><br />
+    </div>
+    <hr />
+    <div id="mydiv4">
+        <span>I Can Move Only Verticaly....</span><br /><br />
+    </div>
+    <hr />
+    <div id="mydiv5">
+        <span>I Can Move Only After 3 Seconds....</span><br /><br />
+    </div>
+    <hr />
+    <div id="mydiv6">
+        <span>I Can Move Only After 200 PX....</span>
+    </div>
+    <hr />
+</body>
+</html>

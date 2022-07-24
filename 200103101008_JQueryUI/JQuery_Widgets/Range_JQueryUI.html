@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+    <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#AgeSlider").slider({
+                  orientation:"horizontal",
+                  min: 18,
+                  max: 100,
+                  value: 18,
+                  slide: function (event, ui) {
+                      $("#AgeValue").val(ui.value);
+                  }
+              });
+              $("#AgeValue").val($("#AgeSlider").slider("value"));
+              $("#PriceValue").slider({
+                  range:true,
+                  min: 1,
+                  max: 500,
+                  value: [1,50],
+                  start: function (event, ui) {
+                      $("#StartValue")
+                     .val("$" + ui.values[0]);
+                  },
+                  stop: function (event, ui) {
+                      $("#endvalue")
+                     .val("$" + ui.values[1]);
+                  },
+                  change: function (event, ui) {
+                      $("#changevalue")
+                     .val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  },
+                  slide: function (event, ui) {
+                      $("#slidevalue")
+                     .val("$" + ui.values[0] + " - $" + ui.values[1]);
+                  }
+                  
+              });  
+        })
+    </script>
+      <style type="text/css">
+        #AgeValue
+        {
+            width:40px;
+            height:30px;
+            font-size:large;
+            font-weight:bold;
+            color:Red;
+        }
+        #AgeSlider,#PriceValue
+        {
+            width:300px;
+        }
+        #StartValue,#endvalue,#changevalue,#slidevalue
+        {
+            width:150px;
+            height:30px;
+            font-size:large;
+            font-weight:bold;
+            color:Navy;
+        }
+  </style>
+</head>
+<body>
+    <p>
+            <label for="AgeValue">Enter Your Age:</label>
+            <input type="text" id="AgeValue" disabled="true"/>
+    </p>
+    <div id="AgeSlider"></div>
+    <hr>
+    <div id="PriceValue"></div>
+
+        <p>
+          <label for="StartValue">Enter Start Value:</label>
+          <input type="text" id="StartValue" disabled="true">
+        </p>  
+        <p>
+            <label for="endvalue">End Value:</label>
+            <input type="text" id="endvalue" disabled="true">
+        </p>
+        <p>
+            <label for="changevalue">Change Value:</label>
+            <input type="text" id="changevalue" disabled="true">
+        </p>
+        <p>
+            <label for="slidevalue">Slide Value:</label>
+            <input type="text" id="slidevalue" disabled="true">
+        </p>
+   
+</body>
+</html>
