@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="this.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/6e1242f0aa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- bootstrap -->
+  
+   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script> 
+
+    <!-- about js -->
+    <script>
+        var tablinks=document.getElementsByClassName("tablinks")
+        var tabcontent=document.getElementsByClassName("tabcontent")
+        function opentab(tabname){
+         for(tablink of tablinks){
+             tablink.classList.remove("active-link")
+         }
+         for(x of tabcontent){
+            x.classList.remove("active-tab")
+         }
+         event.currentTarget.classList.add("active-link")
+         document.getElementById(tabname).classList.add("active-tab")
+        }
+     </script>
+
+
+     <!-- navbar -->
+     
+     <!-- header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Rutu.png" class="logo" >
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contect">Contect</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text" data-aos="fade-right" data-aos-duration="1000">
+                    <p>Web/Android Developer</p>
+                    <h2>Hii, I'm Rutu Hirapara <br> from Ahemdabad</h2>
+            </div>
+        </div>
+    </div>
+    
+    <!-- about -->
+    <div id="about">
+       
+        <div class="container">
+            <div class="row">
+                <video src="stock.mp4" autoplay loop muted 
+                style=" position: fixed;
+                    right: 0;
+                    bottom: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    z-index: -1!important;"
+                    ></video>
+                    <div class="about-col-1">
+                        <img src="pic 2.jpg" id="image"  data-aos="fade-right" data-aos-duration="1000">
+                    </div>
+                    <div class="about-col-2" >
+                        <h2 class="sub-titles" data-aos="fade-left" data-aos-duration="1000">About Me</h2><br><br>
+                        <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste distinctio dolores, iure esse explicabo nisi omnis repellendus nihil iusto debitis sed consequuntur sit praesentium unde vel cupiditate sint optio animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt dolorum ducimus odit enim quibusdam ipsum optio sint, suscipit cum vitae nulla doloribus quos repellat. Necessitatibus consequuntur maxime doloremque nobis?</p>
+                        <div class="tabtitle" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                            <p class="tablinks active-link" onclick="opentab('skills')" >Skills</p>
+                            <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                            <p class="tablinks" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tabcontent active-tab" id="skills" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+                            <ul>
+                            <li><span>Web Development</span><br>Front end web Developer</li>
+                            <li><span>App Development</span><br>Java/Kotlin Android Developer</li>
+                            </ul>
+                        </div>
+                        <div class="tabcontent" id="experience" >
+                            <ul>
+                            <li><span>AWT Training</span><br>Compeleted 1 month of training of front end technologies like HTML5,CSS3,JS,JQuery</li>
+                            <li><span>Internship</span><br>Internship in Android Development</li>
+                            </ul>
+                        </div>
+                        <div class="tabcontent" id="education">
+                            <ul>
+                            <li><span>B.Tech</span><br>Pursuing B.Tech from SilverOak Univercity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+    
+<!-- services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-titles"data-aos="fade-right" data-aos-duration="1000">My services</h1>
+            <div class="service-list">
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
+                    <i class="fa-brands fa-android"></i><br><br>
+                    <h2>Android Development</h2><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis optio velit cupiditate harum. Nobis tempore necessitatibus sequi culpa. Laboriosam nulla beatae ullam harum accusantium blanditiis quos, animi consequatur quis nihil?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <i class="fa-solid fa-code"></i><br><br>
+                    <h2>Web Development</h2><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis optio velit cupiditate harum. Nobis tempore necessitatibus sequi culpa. Laboriosam nulla beatae ullam harum accusantium blanditiis quos, animi consequatur quis nihil?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <i class="fa-solid fa-crop-simple"></i><br><br>
+                    <h2>Ui/Ux Design</h2><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis optio velit cupiditate harum. Nobis tempore necessitatibus sequi culpa. Laboriosam nulla beatae ullam harum accusantium blanditiis quos, animi consequatur quis nihil?</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div><br><br><br>
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-titles" data-aos="fade-right" data-aos-duration="1000">My Work</h1>
+            <div class="work-list"data-aos="fade-up" data-aos-duration="800" >
+               <div class="work">
+                    <img src="SS1.jpg">
+                    <div class="layer">
+                        <h3>MemeShare App</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt nisi quas quibusdam dolorum neque hic provident quasi accusantium corporis totam ipsum quae repellat excepturi unde, debitis odio! Odit, possimus consequatur.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                    </div>
+               </div>
+               <div class="work"><img src="SS2.jpg">
+                <div class="layer">
+                    <h3>NewsON App</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt nisi quas quibusdam dolorum neque hic provident quasi accusantium corporis totam ipsum quae repellat excepturi unde, debitis odio! Odit, possimus consequatur.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div> 
+               </div>
+            </div>
+        </div>
+    </div><br><br>
+
+    <!-- contect -->
+    <div id="contect">
+        <div class="container">
+            <div class="row">
+                <div class="contect-left"data-aos="fade-right" data-aos-duration="800" >
+                    <h1 class="sub-titles">Contect Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>rutu@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9876543210</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                        <a href="resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contect-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required data-aos="fade-left" data-aos-duration="500" data-aos-delay="100">
+                        <input type="email" name="Email" placeholder="Your Email" required data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
+                        <textarea name="Message" rows="6" placeholder="Your Message"  data-aos="fade-left" data-aos-duration="500" data-aos-delay="300"></textarea>
+                        <button type="submit" class="btn btn2" data-aos="fade-left" data-aos-duration="500" data-aos-delay="400">Submit</button >
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Rutu Hirapara</p>
+        </div>
+    </div>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right="0";
+        }
+        function closemenu(){
+            sidemeu.style.right="-200px";
+        }
+     </script>
+</body>
+</html>
